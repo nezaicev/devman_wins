@@ -10,8 +10,8 @@ CREATION_DATE = datetime(year=1920, month=1, day=1)
 
 
 def read_file_to_dict(path_file):
-    data = pandas.read_excel(path_file, na_values=['N/A', 'NA'], keep_default_na=False)
-    return data.to_dict(orient='records')
+    products = pandas.read_excel(path_file, na_values=['N/A', 'NA'], keep_default_na=False)
+    return products.to_dict(orient='records')
 
 
 def validate_format_word(year):
@@ -44,7 +44,7 @@ def main():
     rendered_page = template.render(
         count_years=delta_year,
         word_year=validate_format_word(delta_year),
-        data=products_by_category,
+        products=products_by_category,
 
     )
     with open('index.html', 'w', encoding="utf8") as file:

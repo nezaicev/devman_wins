@@ -17,7 +17,7 @@ template = env.get_template('template.html')
 
 
 def read_file_to_dict(path_file):
-    data = pandas.read_excel(path_file)
+    data = pandas.read_excel(path_file,na_values=['N/A', 'NA'], keep_default_na=False)
     return data.to_dict(orient='records')
 
 
@@ -38,7 +38,6 @@ def main():
     args = parser.parse_args()
     delta_year = CREATION_DATE.year - datetime.today().year
     data = read_file_to_dict(args.path_to_file)
-    data.sort(key=lambda x: x["Категория"])
     products_by_category = defaultdict(list)
 
     for i in data:

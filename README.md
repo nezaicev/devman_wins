@@ -6,7 +6,8 @@
  
 
 ## Окружение
- #### Requarements
+- Скачайте код
+ #### Requirements
 Должен быть установлен  Python3
 
 ``` bash
@@ -15,7 +16,6 @@ pip install -r requirements.txt
 
 ## Запуск
 
-- Скачайте код
 - Запустите сайт командой :
 ``` bash
 python3 main.py example.xlsx

@@ -1,4 +1,4 @@
-# Каркас для разработки статических сайтов
+# Новое русское вино
 Данное приложение можно использовать в качестве  основы для разработки статических сайтов. 
 Скрипт генерирует *index.html* на основе заданного шаблона [template.html](https://github.com/nezaicev/devman_wins/blob/master/template.html) и
 и файла [example.xlsx](https://github.com/nezaicev/devman_wins/blob/master/example.xlsx), который содержит входные данные. 

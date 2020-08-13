@@ -38,8 +38,8 @@ def main():
     products = read_file_to_dict(args.path_to_file)
     products_by_category = defaultdict(list)
 
-    for i in products:
-        products_by_category[i['Категория']].append(i)
+    for wine in products:
+        products_by_category[wine['Категория']].append(wine)
 
     rendered_page = template.render(
         count_years=delta_year,
